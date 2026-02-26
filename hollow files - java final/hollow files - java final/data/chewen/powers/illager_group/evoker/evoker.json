@@ -1,0 +1,20 @@
+{
+    "powers": [
+      "chewen:illager_group/evoker/armour_limitations_evoker",
+      "chewen:illager_group/illager_typing",
+      "chewen:illager_group/evoker/painful_flame",
+      "chewen:illager_group/evoker/summon_fangs",
+      "chewen:illager_group/evoker/summon_vex",
+      "chewen:illager_group/evoker/totem",
+      "chewen:illager_group/evoker/woodbound"
+
+],
+  
+    "icon": {
+        "id": "minecraft:totem_of_undying"
+    },
+    "order": 3,
+    "impact": 3,
+    "name": "Evoker",
+    "description": "A powerful mage of a manor long ago"
+}
