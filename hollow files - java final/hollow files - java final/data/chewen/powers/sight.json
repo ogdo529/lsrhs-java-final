@@ -1,0 +1,73 @@
+{
+    "type": "origins:multiple",
+    "name": "§d§lAll-Seeing Eye§r",
+    "description": "§r§7In your astral form, you perceive all living beings around you with supernatural clarity. Darkness holds no secrets from you.§r",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "minecraft:textures/item/ender_pearl.png",
+            "text": "§7All living entities within 25 blocks glow purple while you're astral§r"
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "minecraft:textures/mob_effect/darkness.png",
+            "text": "§7Immunity to darkness and blindness while astral§r"
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "minecraft:textures/mob_effect/night_vision.png",
+            "text": "§7Constant night vision while astral§r"
+        }
+    ],
+
+    "glow": {
+        "type": "origins:entity_glow",
+        "entity_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:living"
+                }
+            ]
+        },
+        "bientity_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                "type": "origins:actor_condition",
+                "condition": {
+                    "type": "origins:nbt",
+                    "nbt": "{Tags:[\"seer_astral\"]}"
+                }
+                },
+                {
+                    "type": "origins:distance",
+                    "comparison": "<=",
+                    "compare_to": 25
+                }
+            ]
+        },
+        "use_teams": false,
+        "red": 0.75,
+        "green": 0.0,
+        "blue": 1.0
+    },
+    "no-darkness": {
+        "type": "origins:effect_immunity",
+        "effects": [
+            "minecraft:darkness",
+            "minecraft:blindness"
+        ],
+        "condition": {
+            "type": "origins:nbt",
+            "nbt": "{Tags:[\"seer_astral\"]}"
+        }
+    },
+    "night_vision": {
+        "type": "origins:night_vision",
+        "condition": {
+            "type": "origins:nbt",
+            "nbt": "{Tags:[\"seer_astral\"]}"
+        }
+    }
+}

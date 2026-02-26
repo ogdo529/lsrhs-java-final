@@ -1,0 +1,32 @@
+{
+    "type": "origins:multiple",
+    "name": "§4§lWatcher, Not Warrior§r",
+    "description": "§r§7Your astral form is ill-suited for direct combat. You deal reduced melee damage, relying instead on positioning, knowledge, and preparation.§r",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "minecraft:textures/item/wooden_sword.png",
+            "text": "§7Deal 50% less melee damage while astral§r"
+        }
+    ],
+    
+    "reduced_damage": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:if_else",
+            "condition": {
+                "type": "origins:nbt",
+                "nbt": "{Tags:[\"seer_astral\"]}"
+            },
+            "if_action": {
+                "type": "origins:execute_command",
+                "command": "attribute @s minecraft:generic.attack_damage base set 0.5"
+            },
+            "else_action": {
+                "type": "origins:execute_command",
+                "command": "attribute @s minecraft:generic.attack_damage base set 1"
+            }
+        }
+    }
+}

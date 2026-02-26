@@ -1,0 +1,16 @@
+{
+    "type": "origins:prevent_block_use",
+    "name": "§5§lIntangible Will§r",
+    "description": "§r§7Between thought and matter lies an unbreakable barrier§r",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "minecraft:textures/item/barrier.png",
+            "text": "§7Cannot use blocks such as beds, furnaces, crafting tables, chest and so on while astral§r"
+        }
+    ],
+    "condition": {
+        "type": "origins:nbt",
+        "nbt": "{Tags:[\"seer_astral\"]}"
+    }
+}

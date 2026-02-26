@@ -1,0 +1,15 @@
+{
+    "name": "§5§lSealed Existence§r",
+    "description": "§r§7Your true body is bound to a personal pocket dimension, hidden from all other worlds.§r\n\n§7You can never leave this place in physical form.§r",
+    "type": "origins:modify_player_spawn",
+    "dimension": "seer:seer_pocket_dimension",
+    "biome": "seer:pocket_void",
+    "spawn_strategy": "default",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "minecraft:textures/item/compass_00.png",
+            "text": "You spawn in your own pocket dimension!"
+        }
+    ] 
+}

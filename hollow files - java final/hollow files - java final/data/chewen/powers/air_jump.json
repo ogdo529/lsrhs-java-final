@@ -1,0 +1,132 @@
+{
+    "type": "origins:multiple",
+    "name": "§d§lEthereal Leap§r",
+    "description": "§r§4§lRequires §2Movement Upgrade:§8.§r§r§7Your astral form can step on air itself, defying gravity's pull. Each leap propels you forward and upward.§r\n\n§7Press jump while airborne to perform up to 5 aerial leaps before touching the ground. Costs 60 energy per jump.§r",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "minecraft:textures/item/feather.png",
+            "text": "§7Press jump in midair to perform aerial leaps - max 5 jumps, costs 60 energy each§r"
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "minecraft:textures/mob_effect/slow_falling.png",
+            "text": "§7Constant slow falling while astral§r"
+        }
+    ],
+    
+    "jump_resource": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 5,
+        "start_value": 5,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+            "bar_index": 5,
+            "condition": {
+                "type": "origins:nbt",
+                "nbt": "{Tags:[\"seer_move\"]}"
+            }
+        }
+    },
+    
+    "reset_jumps": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "resource set @s seer:air_jump_jump_resource 5"
+        },
+        "condition": {
+            "type": "origins:on_block"
+        }
+    },
+
+    "constant_slowfalling": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "effect give @s minecraft:slow_falling 2 1 true"
+        },
+        "condition": {
+            "type": "origins:nbt",
+            "nbt": "{Tags:[\"seer_astral\"]}"
+        }
+    },
+
+    
+    "air_jump": {
+        "type": "origins:active_self",
+        "key": {
+            "key": "key.jump"
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "resource change @s seer:air_jump_jump_resource -1"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "resource change @s seer:astral_energy_energy_resource -60"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "playsound minecraft:entity.phantom.flap player @s ~ ~ ~ 0.4 1.6"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "playsound minecraft:block.amethyst_cluster.hit ambient @s ~ ~ ~ 0.3 1.8"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:cloud ~ ~0.1 ~ 0.25 0.05 0.25 0.01 12 force"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:reverse_portal ~ ~0.1 ~ 0.15 0.1 0.15 0.05 8 force"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:end_rod ~ ~0.2 ~ 0.1 0.2 0.1 0.01 4 force"
+                },
+                {
+                    "type": "origins:add_velocity",
+                    "z": 0.8,
+                    "y": 1,
+                    "space": "local",
+                    "set": true
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Tags:[\"seer_astral\"]}"
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Tags:[\"seer_move\"]}"
+                },
+                {
+                    "type": "origins:on_block",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "seer:air_jump_jump_resource",
+                    "comparison": ">",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:moving"
+                }
+            ]
+        }
+    }
+}

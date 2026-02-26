@@ -1,0 +1,15 @@
+{
+    "origins": [
+        "chewen:bewitched",
+        "chewen:dragon",
+        "chewen:evoker",
+        "chewen:flying_fish",
+        "chewen:griffin",
+        "chewen:haunted_scarecrow",
+        "chewen:illager",
+        "chewen:siren",
+        "chewen:vampire_bat"
+        
+    ],
+    "loading_priority": 2
+}

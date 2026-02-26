@@ -1,0 +1,57 @@
+{
+    "type": "origins:multiple",
+    "name": "§c§lDisconnected§r",
+    "description": "§r§7Your astral body cannot eat, drink, or heal naturally. All sustenance and recovery must occur while inhabiting your true body.§r",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "minecraft:textures/mob_effect/regeneration.png",
+            "text": "§7No eating, drinking, or natural regeneration while astral§r"
+        }
+    ],
+    
+    "prevent_eating": {
+        "type": "origins:prevent_item_use",
+        "item_condition": {
+            "type": "origins:food"
+        },
+        "condition": {
+            "type": "origins:nbt",
+            "nbt": "{Tags:[\"seer_astral\"]}"
+        }
+    },
+    
+    "prevent_drinking": {
+        "type": "origins:prevent_item_use",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "minecraft:potion"
+            }
+        },
+        "condition": {
+            "type": "origins:nbt",
+            "nbt": "{Tags:[\"seer_astral\"]}"
+        }
+    },
+    
+    "no_regen": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "effect clear @s minecraft:regeneration"
+        },
+        "condition": {
+            "type": "origins:nbt",
+            "nbt": "{Tags:[\"seer_astral\"]}"
+        }
+    },
+    "noregen": {
+        "type": "origins:disable_regen",
+        "condition": {
+            "type": "origins:nbt",
+            "nbt": "{Tags:[\"seer_astral\"]}"
+        }
+    }
+}

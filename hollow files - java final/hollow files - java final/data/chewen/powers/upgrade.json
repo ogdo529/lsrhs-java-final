@@ -1,0 +1,430 @@
+{
+    "type": "origins:multiple",
+    "name": "§6§lProgression Rituals§r",
+    "description": "§r§7Through ancient rituals performed at specific locations, you can unlock new abilities for your astral form. With each ritual, your prison expands. §r\n\n§e§lPress saveToolbarActivator at marked lodestones to unlock upgrades.§r",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "minecraft:textures/item/amethyst_shard.png",
+            "text": "§7Anchor Upgrade: Stand on lodestone at 0,Y,3 with 4 amethyst shards "
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "minecraft:textures/block/bell_bottom.png",
+            "text": "§7Mark Upgrade: Visit a village, then stand on lodestone at 3,Y,0"
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "minecraft:textures/item/feather.png",
+            "text": "§7Movement Upgrade: Visit the Nether, then stand on lodestone at 6,Y,3"
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "minecraft:textures/mob_effect/regeneration.png",
+            "text": "§7Regeneration Upgrade: Visit the End, then stand on lodestone at 3,Y,6"
+        }
+    ],
+    "check_upgrade": {
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "execute store result score @s seer_amethyst run clear @s minecraft:amethyst_shard 0"
+        }
+    },
+    "give_tag": {
+        "type": "origins:active_self",
+        "key": {
+            "key": "key.saveToolbarActivator"
+        },
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "function seer:upgrade1"
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:scoreboard",
+                    "objective": "seer_amethyst",
+                    "comparison": ">=",
+                    "compare_to": 4
+                },
+                {
+                    "type": "origins:on_block",
+                    "block_condition": {
+                        "type": "origins:block",
+                        "block": "minecraft:lodestone"
+                    }
+                },
+                {
+                    "type": "origins:distance_from_coordinates",
+                    "offset": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 3
+                    },
+                    "comparison": "<",
+                    "compare_to": 2,
+                    "result_on_the_wrong_dimension": 999999
+                }
+            ]
+        }
+    },
+    "give_mark_tag": {
+        "type": "origins:active_self",
+        "key": {
+            "key": "key.saveToolbarActivator"
+        },
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "function seer:upgrade2"
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Tags:[\"seer_visited_village\"]}"
+                },
+                {
+                    "type": "origins:on_block",
+                    "block_condition": {
+                        "type": "origins:block",
+                        "block": "minecraft:lodestone"
+                    }
+                },
+                {
+                    "type": "origins:distance_from_coordinates",
+                    "offset": {
+                        "x": 3,
+                        "y": 0,
+                        "z": 0
+                    },
+                    "comparison": "<",
+                    "compare_to": 2,
+                    "result_on_the_wrong_dimension": 999999
+                }
+            ]
+        }
+    },
+    "give_move_tag": {
+        "type": "origins:active_self",
+        "key": {
+            "key": "key.saveToolbarActivator"
+        },
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "function seer:upgrade3"
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Tags:[\"seer_visited_nether\"]}"
+                },
+                {
+                    "type": "origins:on_block",
+                    "block_condition": {
+                        "type": "origins:block",
+                        "block": "minecraft:lodestone"
+                    }
+                },
+                {
+                    "type": "origins:distance_from_coordinates",
+                    "offset": {
+                        "x": 6,
+                        "y": 0,
+                        "z": 3
+                    },
+                    "comparison": "<",
+                    "compare_to": 2,
+                    "result_on_the_wrong_dimension": 999999
+                }
+            ]
+        }
+    },
+    "give_regen_tag": {
+        "type": "origins:active_self",
+        "key": {
+            "key": "key.saveToolbarActivator"
+        },
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "function seer:upgrade4"
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Tags:[\"seer_visited_end\"]}"
+                },
+                {
+                    "type": "origins:on_block",
+                    "block_condition": {
+                        "type": "origins:block",
+                        "block": "minecraft:lodestone"
+                    }
+                },
+                {
+                    "type": "origins:distance_from_coordinates",
+                    "offset": {
+                        "x": 3,
+                        "y": 0,
+                        "z": 6
+                    },
+                    "comparison": "<",
+                    "compare_to": 2,
+                    "result_on_the_wrong_dimension": 999999
+                }
+            ]
+        }
+    },
+    "final_upgrade": {
+        "type": "origins:active_self",
+        "key": {
+            "key": "key.saveToolbarActivator"
+        },
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "function seer:anchor_sucess"
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:command",
+                    "command": "execute unless block ~ ~-1 ~-1 minecraft:crying_obsidian",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:command",
+                    "command": "execute unless block ~1 ~-1 ~ minecraft:crying_obsidian",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:command",
+                    "command": "execute unless block ~ ~-1 ~1 minecraft:crying_obsidian",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:command",
+                    "command": "execute unless block ~-1 ~-1 ~ minecraft:crying_obsidian",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:command",
+                    "command": "execute unless block ~ ~-1 ~-2 minecraft:lodestone",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:command",
+                    "command": "execute unless block ~2 ~-1 ~ minecraft:lodestone",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:command",
+                    "command": "execute unless block ~ ~-1 ~2 minecraft:lodestone",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:command",
+                    "command": "execute unless block ~-2 ~-1 ~ minecraft:lodestone",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:command",
+                    "command": "execute unless block ~-1 ~-1 ~1 minecraft:deepslate",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:command",
+                    "command": "execute unless block ~1 ~-1 ~1 minecraft:deepslate",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:command",
+                    "command": "execute unless block ~1 ~-1 ~-1 minecraft:deepslate",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:command",
+                    "command": "execute unless block ~-1 ~-1 ~-1 minecraft:deepslate",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:on_block",
+                    "block_condition": {
+                        "type": "origins:block",
+                        "block": "minecraft:respawn_anchor"
+                    }
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Tags:[\"seer_astral\"]}"
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Tags:[\"seer_mark\"]}"
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Tags:[\"seer_move\"]}"
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Tags:[\"tier_2\"]}"
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Tags:[\"seer_regen\"]}"
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Tags:[\"seer_final\"]}",
+                    "inverted": true
+                }
+            ]
+        }
+    },
+    "anchor_particles": {
+        "type": "origins:action_over_time",
+        "interval": 5,
+        "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+            "type": "origins:execute_command",
+            "command": "particle minecraft:portal ~ ~0.1 ~ 0.3 0.1 0.3 0.05 5 force"
+            },
+            {
+            "type": "origins:execute_command",
+            "command": "playsound minecraft:entity.allay.ambient_without_item ambient @s ~ ~ ~ 0.5 0.5"
+            }
+        ]
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:command",
+                    "command": "execute unless block ~ ~-1 ~-1 minecraft:crying_obsidian",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:command",
+                    "command": "execute unless block ~1 ~-1 ~ minecraft:crying_obsidian",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:command",
+                    "command": "execute unless block ~ ~-1 ~1 minecraft:crying_obsidian",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:command",
+                    "command": "execute unless block ~-1 ~-1 ~ minecraft:crying_obsidian",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:command",
+                    "command": "execute unless block ~ ~-1 ~-2 minecraft:lodestone",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:command",
+                    "command": "execute unless block ~2 ~-1 ~ minecraft:lodestone",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:command",
+                    "command": "execute unless block ~ ~-1 ~2 minecraft:lodestone",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:command",
+                    "command": "execute unless block ~-2 ~-1 ~ minecraft:lodestone",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:command",
+                    "command": "execute unless block ~-1 ~-1 ~1 minecraft:deepslate",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:command",
+                    "command": "execute unless block ~1 ~-1 ~1 minecraft:deepslate",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:command",
+                    "command": "execute unless block ~1 ~-1 ~-1 minecraft:deepslate",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:command",
+                    "command": "execute unless block ~-1 ~-1 ~-1 minecraft:deepslate",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:on_block",
+                    "block_condition": {
+                        "type": "origins:block",
+                        "block": "minecraft:respawn_anchor"
+                    }
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Tags:[\"seer_astral\"]}"
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Tags:[\"seer_mark\"]}"
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Tags:[\"seer_move\"]}"
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Tags:[\"tier_2\"]}"
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Tags:[\"seer_regen\"]}"
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Tags:[\"seer_final\"]}",
+                    "inverted": true
+                }
+            ]
+        }
+    }
+}

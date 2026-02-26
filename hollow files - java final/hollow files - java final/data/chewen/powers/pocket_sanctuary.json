@@ -1,0 +1,16 @@
+{
+    "type": "origins:invulnerability",
+    "name": "§5§lSanctuary of the Bound§r",
+    "description": "§r§7Within your pocket dimension, your true body is untouchable. No harm can reach you here.§r\n\n§7This prison is also your perfect refuge.§r",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "minecraft:textures/mob_effect/resistance.png",
+            "text": "§7You are completely invulnerable while in your pocket dimension§r"
+        }
+    ],
+    "condition": {
+        "type": "origins:dimension",
+        "dimension": "seer:seer_pocket_dimension"
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "type": "origins:simple",
+    "name": "§6§lBreaking the Seal§r",
+    "description": "§r§7The ultimate ritual to escape your dimensional prison. Gather all four upgrades, then construct the liberation altar in the overworld:§r\n\n§e§lStructure (place on respawn anchor):§r\n§8- §7Center: §fRespawn Anchor§r\n§8- §7Adjacent (4 sides): §5Crying Obsidian§r\n§8- §7Corners: §8Deepslate§r\n§8- §7Outer (4 sides): §3Lodestone§r\n\n§6Stand on the respawn anchor while astral and press saveToolbarActivator to complete the ritual.§r\n\n§d§lYour consciousness will be freed from its cage, allowing you to exist as a new being.§r",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "minecraft:textures/block/respawn_anchor_top.png",
+            "text": "§6Build the liberation altar and press saveToolbarActivator while astral with all upgrades§r"
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "minecraft:textures/item/amethyst_shard.png",
+            "text": "§7Required: Anchor, Mark, Movement, and Regeneration upgrades§r"
+        }
+    ]
+}

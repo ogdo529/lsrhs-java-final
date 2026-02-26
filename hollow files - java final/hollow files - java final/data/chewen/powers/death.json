@@ -1,0 +1,24 @@
+{
+  "type": "origins:multiple",
+  "name": "§5§lEternal Binding§r",
+  "description": "§r§7Your astral form cannot be destroyed. When your projection would perish, your consciousness is forcibly recalled to your sealed body.§r\n\n§7Death is merely an inconvenience for one trapped between worlds.§r",
+  "badges": [
+    {
+      "type": "origins:tooltip",
+      "sprite": "minecraft:textures/item/totem_of_undying.png",
+      "text": "§7You cannot die while astral - taking lethal damage returns you to your body§r"
+    }
+  ],
+  "max_damage": {
+    "type": "origins:modify_damage_taken",
+    "modifier": {
+        "operation": "max_total",
+        "amount": 4
+    },
+    "damage_condition": {
+      "type": "origins:amount",
+      "comparison": ">=",
+      "compare_to": 4
+    }
+  }
+}

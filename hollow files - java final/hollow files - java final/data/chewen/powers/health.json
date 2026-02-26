@@ -1,0 +1,28 @@
+{
+    "type": "origins:action_over_time",
+    "name": "§d§lFragile Projection§r",
+    "description": "§r§7Your astral form is weaker than your true body. While projecting, your maximum health is reduced to 6 hearts.§r\n\n§7A projection is but a shadow of reality.§r",
+    "interval": 1,
+    "badges": [
+        {
+        "type": "origins:tooltip",
+        "sprite": "minecraft:textures/gui/sprites/hud/heart/half.png",
+        "text": "§7You have only 6 hearts of health while in astral form§r"
+        }
+    ],
+    "entity_action": {
+        "type": "origins:if_else",
+        "condition": {
+            "type": "origins:nbt",
+            "nbt": "{Tags: [seer_astral]}"
+        },
+        "if_action": {
+            "type": "origins:execute_command",
+            "command": "attribute @s minecraft:generic.max_health base set 12"
+        },
+        "else_action": {
+            "type": "origins:execute_command",
+            "command": "attribute @s minecraft:generic.max_health base set 20"
+        }
+    }
+}

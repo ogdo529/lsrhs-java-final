@@ -1,0 +1,25 @@
+{
+    "type": "origins:multiple",
+    "name": "§5§lDimensional Constraints§r",
+    "description": "§r§7While trapped in your pocket dimension, you cannot break blocks or change the world around you.§r\n\n§7Your powers are limited in this sealed space.§r",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "minecraft:textures/item/iron_pickaxe.png",
+            "text": "You cannot break or place blocks in the pocket dimension"
+        }
+    ],
+    "adventure": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "execute if entity @s[gamemode=!spectator, gamemode=!creative] run gamemode adventure @s"
+        },
+        "condition": {
+            "type": "origins:dimension",
+            "dimension": "seer:seer_pocket_dimension"
+        }
+        
+    }
+}

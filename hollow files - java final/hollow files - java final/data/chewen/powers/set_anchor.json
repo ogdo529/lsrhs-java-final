@@ -1,0 +1,51 @@
+{
+    "type": "origins:active_self",
+    "name": "§5§lSet Anchor Point§r",
+    "description": "§r§4§lRequires Mark Upgrade:§8.§r§r§7Consume all your astral energy to mark a new location in the world as your projection point.§r\n\n§7Your astral form will emerge at this location when you project from your pocket dimension.§r",
+    "key": {
+        "key": "key.loadToolbarActivator"
+    },
+    "cooldown": 1200,
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+        "bar_index": 18
+    },
+    "badges": [
+        {
+            "type": "origins:keybind",
+            "sprite": "minecraft:textures/block/lodestone_top.png",
+            "text": "§7Press %s while astral to set a new anchor point - drains all energy§r"
+        }
+    ],
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "particle minecraft:sonic_boom ~ ~1 ~"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "function seer:set_anchor"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "resource set @s seer:astral_energy_energy_resource 0"
+            }
+        ]
+    },
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:nbt",
+                "nbt": "{Tags:[\"seer_astral\"]}"
+            },
+            {
+                "type": "origins:nbt",
+                "nbt": "{Tags:[\"seer_mark\"]}"
+            }
+        ]
+    }
+}

@@ -1,0 +1,124 @@
+{
+    "type": "origins:multiple",
+    "name": "§d§lEthereal Movement§r",
+    "description": "§r§7Your astral form transcends physical limitations. You can phase through matter, but doing so drains your astral energy.",
+    "badges": [
+    {
+        "type": "origins:tooltip",
+        "sprite": "minecraft:textures/mob_effect/slow_falling.png",
+        "text": "§7You take no fall damage while astral§r"
+    },
+    {
+        "type": "origins:tooltip",
+        "sprite": "minecraft:textures/mob_effect/speed.png",
+        "text": "§7Constant Speed II while astral§r"
+    },
+    {
+        "type": "origins:tooltip",
+        "sprite": "minecraft:textures/block/glass.png",
+        "text": "§7Phase through blocks - drains 1 energy/second, sneak to phase down§r"
+    }
+    ],
+    "no-fall": {
+        "type": "origins:invulnerability",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "fall"
+        },
+        "condition": {
+            "type": "origins:nbt",
+            "nbt": "{Tags:[\"seer_astral\"]}"
+        }
+    },
+    
+    "constant_speed": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "effect give @s minecraft:speed 2 1 true"
+        },
+        "condition": {
+            "type": "origins:nbt",
+            "nbt": "{Tags:[\"seer_astral\"]}"
+        }
+    },
+    
+    "phasing": {
+        "type": "origins:phasing",
+        "blacklist": false,
+        "block_condition": {
+            "type": "origins:in_tag",
+            "tag": "seer:anchor_protected",
+            "inverted": true
+        },
+        "render_type": "none",
+        "view_distance": 100,
+        "phase_down_condition": {
+            "type": "origins:sneaking"
+        },
+        "condition": {
+            "type": "origins:nbt",
+            "nbt": "{Tags:[\"seer_astral\"]}"
+        }
+    },
+    
+    "phasing_drain_tier_1": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "resource change @s seer:astral_energy_energy_resource -1"
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Tags:[\"seer_astral\"]}"
+                },
+                {
+                    "type": "origins:in_block",
+                    "block_condition": {
+                        "type": "origins:in_tag",
+                        "tag": "seer:intangible",
+                        "inverted": true
+                    }
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Tags:[\"tier_1\"]}"
+                }
+            ]
+        }
+    },
+    "phasing_drain_tier_2": {
+        "type": "origins:action_over_time",
+        "interval": 3,
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "resource change @s seer:astral_energy_energy_resource -1"
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Tags:[\"seer_astral\"]}"
+                },
+                {
+                    "type": "origins:in_block",
+                    "block_condition": {
+                        "type": "origins:in_tag",
+                        "tag": "seer:intangible",
+                        "inverted": true
+                    }
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Tags:[\"tier_2\"]}"
+                }
+            ]
+        }
+    }
+}

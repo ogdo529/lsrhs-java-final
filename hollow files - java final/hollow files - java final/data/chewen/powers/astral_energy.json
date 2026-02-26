@@ -1,0 +1,287 @@
+{
+    "type": "origins:multiple",
+    "name": "§d§lAstral Energy§r",
+    "description": "§r§7Your projection is sustained by a finite reserve of astral energy. Moving, jumping, and phasing drain this energy.§r\n\n§7When depleted, you are forcibly returned to your body. \n\n §r§4§lRequires §5Regeneration Upgrade:§8 §r§7 Energy regenerates in your body, and slowly regenerates while astral if you remain still§r",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "minecraft:textures/item/ender_pearl.png",
+            "text": "§7Energy bar - drains from movement and abilities, regenerates when in your body§r"
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "minecraft:textures/mob_effect/glowing.png",
+            "text": "§7Your form becomes more translucent and emits fewer particles as energy depletes§r"
+        }
+    ],
+    "energy_resource": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 1200,
+        "start_value": 1200,
+        "hud_render": {
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+            "bar_index": 7
+        },
+        "min_action": {
+            "type": "origins:execute_command",
+            "command": "function seer:return"
+        }
+    },
+    "energy_regen_tier_1": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "resource change @s seer:astral_energy_energy_resource 5"
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Tags:[\"seer_astral\"]}",
+                    "inverted": true
+                }
+            ]
+        }
+    },
+    "energy_regen_astral": {
+        "type": "origins:action_over_time",
+        "interval": 5,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "resource change @s seer:astral_energy_energy_resource 5"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "playsound minecraft:block.beacon.ambient ambient @s ~ ~ ~ 0.2 0.5"
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Tags:[\"seer_astral\"]}"
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Tags:[\"seer_regen\"]}"
+                },
+                {
+                    "type": "origins:moving",
+                    "inverted": true
+                }
+            ]
+        }
+    },
+    "energy_drain_tier_1": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "resource change @s seer:astral_energy_energy_resource -1"
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Tags:[\"seer_astral\"]}"
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Tags:[\"tier_1\"]}"
+                },
+                {
+                    "type": "origins:moving"
+                }
+            ]
+        }
+    },
+    "energy_drain_tier_2": {
+        "type": "origins:action_over_time",
+        "interval": 5,
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "resource change @s seer:astral_energy_energy_resource -1"
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Tags:[\"seer_astral\"]}"
+                },
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Tags:[\"tier_2\"]}"
+                },
+                {
+                    "type": "origins:moving"
+                }
+            ]
+        }
+    },
+    
+    "translucent_high": {
+        "type": "origins:model_color",
+        "red": 0.75,
+        "blue": 1.0,
+        "alpha": 0.7,
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Tags:[\"seer_astral\"]}"
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "seer:astral_energy_energy_resource",
+                    "comparison": ">",
+                    "compare_to": 800
+                }
+            ]
+        }
+    },
+    
+    "translucent_medium": {
+        "type": "origins:model_color",
+        "red": 0.75,
+        "blue": 1.0,
+        "alpha": 0.5,
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Tags:[\"seer_astral\"]}"
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "seer:astral_energy_energy_resource",
+                    "comparison": "<=",
+                    "compare_to": 800
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "seer:astral_energy_energy_resource",
+                    "comparison": ">",
+                    "compare_to": 400
+                }
+            ]
+        }
+    },
+    
+    "translucent_low": {
+        "type": "origins:model_color",
+        "red": 0.75,
+        "blue": 1.0,
+        "alpha": 0.3,
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Tags:[\"seer_astral\"]}"
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "seer:astral_energy_energy_resource",
+                    "comparison": "<=",
+                    "compare_to": 400
+                }
+            ]
+        }
+    },
+    
+    "particles_high": {
+        "type": "origins:action_over_time",
+        "interval": 4,
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "particle minecraft:portal ~ ~1 ~ 0.3 0.5 0.3 0.1 10 force"
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Tags:[\"seer_astral\"]}"
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "seer:astral_energy_energy_resource",
+                    "comparison": ">",
+                    "compare_to": 800
+                }
+            ]
+        }
+    },
+    
+    "particles_medium": {
+        "type": "origins:action_over_time",
+        "interval": 10,
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "particle minecraft:portal ~ ~1 ~ 0.3 0.5 0.3 0.1 10 force"
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Tags:[\"seer_astral\"]}"
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "seer:astral_energy_energy_resource",
+                    "comparison": "<=",
+                    "compare_to": 800
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "seer:astral_energy_energy_resource",
+                    "comparison": ">",
+                    "compare_to": 400
+                }
+            ]
+        }
+    },
+    
+    "particles_low": {
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "particle minecraft:portal ~ ~1 ~ 0.3 0.5 0.3 0.1 5 force"
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:nbt",
+                    "nbt": "{Tags:[\"seer_astral\"]}"
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "seer:astral_energy_energy_resource",
+                    "comparison": "<=",
+                    "compare_to": 400
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "seer:astral_energy_energy_resource",
+                    "comparison": ">",
+                    "compare_to": 0
+                }
+            ]
+        }
+    }
+}

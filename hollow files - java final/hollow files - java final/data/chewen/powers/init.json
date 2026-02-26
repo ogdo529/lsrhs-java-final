@@ -1,0 +1,21 @@
+{
+    "type": "origins:action_on_callback",
+    "hidden": true,
+    "entity_action_chosen": {
+        "type": "origins:and",
+        "actions": [
+            {
+            "type": "origins:execute_command",
+            "command": "function seer:init_player"
+            },
+            {
+            "type": "origins:execute_command",
+            "command": "tag @s add tier_1"
+            }
+        ]
+    },
+    "entity_action_lost": {
+        "type": "origins:execute_command",
+        "command": "scale set pehkui:flight 1"
+    }
+}
