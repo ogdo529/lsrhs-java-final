@@ -1,7 +1,7 @@
 {
     "type": "origins:attribute",
     "name": "In Impeccable Illager Health",
-    "description": "You strongggg"
+    "description": "You strongggg",
     "modifier": {
         "attribute": "minecraft:generic.max_health",
         "value": 4,
