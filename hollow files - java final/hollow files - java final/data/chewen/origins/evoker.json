@@ -1,31 +1,20 @@
 {
-	"powers": [
-        "seer:spawn",
-        "seer:pocket",
-        "seer:init",
-		"seer:pocket_sanctuary",
-		"seer:astral_projection",
-		"seer:astral_energy",
-		"seer:ethereal_movement_flying",
-		"seer:ethereal_movement",
-        "seer:death",
-		"seer:sight",
-		"seer:disconnected",
-		"seer:no_bed",
-		"seer:watcher",
-		"seer:health",
-		"seer:upgrade",
-		"seer:tier_2",
-		"seer:set_anchor",
-		"seer:air_jump",
-		"seer:final"
-	],
-	"icon": {
-		"id": "minecraft:spyglass"
-	},
-	"order": 3,
-	"impact": 3,
-	"name": "§5§lSeer",
-	"description": "§r§7A being whose true body is sealed away beyond reality.§r\n\n§7You cannot walk the worlds directly — only observe, project, and influence them from afar.§r"
+    "powers": [
+      "chewen:illager_group/evoker/armour_limitations_evoker",
+      "chewen:illager_group/illager_typing",
+      "chewen:illager_group/evoker/painful_flame",
+      "chewen:illager_group/evoker/summon_fangs",
+      "chewen:illager_group/evoker/summon_vex",
+      "chewen:illager_group/evoker/totem",
+      "chewen:illager_group/evoker/woodbound"
 
+],
+  
+    "icon": {
+        "id": "minecraft:totem_of_undying"
+    },
+    "order": 3,
+    "impact": 3,
+    "name": "Evoker",
+    "description": "A powerful mage of a manor long ago"
 }
