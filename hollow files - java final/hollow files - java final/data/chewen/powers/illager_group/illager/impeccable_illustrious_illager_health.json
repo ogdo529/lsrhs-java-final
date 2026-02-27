@@ -1,7 +1,9 @@
 {
+    "name": "In Impeccable Illager Health",
+    "description": "You strongggg",
     "type": "origins:attribute",
     "modifier": {
-        "name": "In Impeccable Illager Health",
+        
         "attribute": "minecraft:generic.max_health",
         "value": 4,
         "operation": "addition"
