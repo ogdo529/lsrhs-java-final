@@ -1,0 +1,7 @@
+{
+    "origins": [
+        "fish:fish"
+    ],
+    "enabled": true,
+    "name": "Flying Fish"
+}

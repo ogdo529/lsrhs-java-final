@@ -1,0 +1,12 @@
+{
+    "pack": {
+        "name": "Angler",
+        "id": "angler",
+        "pack_format": 15,
+        "version": "1.6",
+        "authors": [
+            "Rainy"
+        ],
+        "description": ""
+    }
+}

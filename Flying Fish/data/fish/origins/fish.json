@@ -1,0 +1,19 @@
+{
+    "powers": [
+        "fish:maxhealth",
+        "fish:armorlimit",
+        "fish:launch",
+        "origins:water_breathing",
+        "origins:aqua_affinity",
+        "origins:swim_speed",
+        "origins:like_water",
+        "origins:aquatic"
+    ],
+    "icon": {
+        "id": "minecraft:cod"
+    },
+    "order": 3,
+    "impact": 3,
+    "name": "Flying Fish",
+    "description": "fish go jump zoom yippee!!!!"
+}

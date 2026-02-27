@@ -1,0 +1,54 @@
+{
+    "name": "Light Armor",
+    "type": "origins:multiple",
+    "armor_value": {
+        "type": "origins:restrict_armor",
+        "head": {
+            "type": "origins:armor_value",
+            "comparison": ">",
+            "compare_to": 2
+        },
+        "chest": {
+            "type": "origins:armor_value",
+            "comparison": ">",
+            "compare_to": 6
+        },
+        "legs": {
+            "type": "origins:armor_value",
+            "comparison": ">",
+            "compare_to": 5
+        },
+        "feet": {
+            "type": "origins:armor_value",
+            "comparison": ">",
+            "compare_to": 2
+        }
+    },
+    "gold_armor": {
+        "type": "origins:restrict_armor",
+        "head": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "minecraft:golden_helmet"
+            }
+        },
+        "chest": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "minecraft:golden_chestplate"
+            }
+        },
+        "legs": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "minecraft:golden_leggings"
+            }
+        },
+        "feet": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "minecraft:golden_boots"
+            }
+        }
+    }
+}
