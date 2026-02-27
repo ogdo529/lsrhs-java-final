@@ -1,31 +1,19 @@
 {
-	"powers": [
-        "seer:spawn",
-        "seer:pocket",
-        "seer:init",
-		"seer:pocket_sanctuary",
-		"seer:astral_projection",
-		"seer:astral_energy",
-		"seer:ethereal_movement_flying",
-		"seer:ethereal_movement",
-        "seer:death",
-		"seer:sight",
-		"seer:disconnected",
-		"seer:no_bed",
-		"seer:watcher",
-		"seer:health",
-		"seer:upgrade",
-		"seer:tier_2",
-		"seer:set_anchor",
-		"seer:air_jump",
-		"seer:final"
-	],
-	"icon": {
-		"id": "minecraft:spyglass"
-	},
-	"order": 3,
-	"impact": 3,
-	"name": "§5§lSeer",
-	"description": "§r§7A being whose true body is sealed away beyond reality.§r\n\n§7You cannot walk the worlds directly — only observe, project, and influence them from afar.§r"
-
+    "powers": [
+		"origins:water_breathing",
+		"origins:aqua_infinity",
+		"origins:swim_speed",
+		"origins:like_water",
+"chewen:positive/nausea_immunity",
+"chewen:positive/drown",
+"chewen:positive/stun",
+"chewen:negative/land_slowness"
+],
+    "icon": {
+        "id": "minecraft:heart_of_the_sea"
+    },
+    "order": 3,
+    "impact": 3,
+    "name": "Siren",
+    "description": "A being who enchants and drowns sailors at sea."
 }
