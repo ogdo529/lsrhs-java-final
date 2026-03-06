@@ -1,0 +1,6 @@
+{
+    "origins": [
+        "recon_drone:recon_drone"
+    ],
+    "enabled": true
+}

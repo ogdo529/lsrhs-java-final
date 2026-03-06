@@ -1,0 +1,22 @@
+{
+    "name": "Recon drone",
+    "description": "A simple reconnisance drone meant for Recon and Planned combat.",
+    "powers": [
+        "recon_drone:strengths/internal_hold",
+        "recon_drone:abilties/jump-kit",
+        "recon_drone:abilties/camoflague_tiles",
+        "recon_drone:abilties/shock-kit",
+        "recon_drone:strengths/strong_thrusters",
+        "recon_drone:strengths/recon_chassis",
+        "recon_drone:strengths/drone_nature",
+        "recon_drone:weaknesses/no_offhand",
+        "recon_drone:weaknesses/nanite_malfunction",
+        "recon_drone:weaknesses/soft_side"
+    ],
+    "icon": {
+        "id": "iron_ingot"
+    },
+    "order": 8,
+    "impact": 3,
+    "loading_priority": 1
+}

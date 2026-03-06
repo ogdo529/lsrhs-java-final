@@ -1,0 +1,22 @@
+{
+    "name": "Strong thrusters",
+    "description": "Your thrusters push you off the ground constantly negating fall damage and allowing you to walk on water.",
+    "type": "origins:multiple",
+    "antifall": {
+        "type": "origins:invulnerability",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "fall"
+        }
+    },
+    "waterwalk": {
+        "condition": {
+            "type": "origins:fluid_height",
+            "fluid": "minecraft:water",
+            "comparison": "<=",
+            "compare_to": 0.4
+        },
+        "type": "origins:walk_on_fluid",
+        "fluid": "minecraft:water"
+    }
+}

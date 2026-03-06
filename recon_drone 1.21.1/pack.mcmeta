@@ -1,0 +1,12 @@
+{
+    "pack": {
+        "name": "recon_drone",
+        "id": "recon_drone",
+        "pack_format": 48,
+        "version": "1.21.1",
+        "authors": [
+            "Johnnybon"
+        ],
+        "description": "A simple reconnisance drone meant for Recon and Planned combat."
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "name": "Recon chassis",
+    "description": "Your light frame offers much higher movement and attack speed alongside built in night vision optics.\n\n(Speed multiplied by 0.75)\n(Attackspeed multiplied by 0.50)\n(Grants nightvision)",
+    "type": "origins:multiple",
+    "speed": {
+        "type": "origins:modify_velocity",
+        "modifier": {
+            "operation": "multiply_total_multiplicative",
+            "value": 0.75
+        },
+        "axes": [
+            "x",
+            "z"
+        ]
+    },
+    "attack_speed": {
+        "type": "origins:attribute",
+        "modifier": {
+            "id": "minecraft:generic.attack_speed",
+            "operation": "multiply_total_multiplicative",
+            "value": 0.5,
+            "name": "attack speed boost"
+        },
+        "update_health": true
+    },
+    "optics": {
+        "type": "origins:toggle_night_vision",
+        "active_by_default": true,
+        "strength": 1,
+        "key": {
+            "key": "key.origins.primary_active"
+        }
+    }
+}

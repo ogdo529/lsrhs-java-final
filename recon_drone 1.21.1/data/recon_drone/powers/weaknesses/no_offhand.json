@@ -1,0 +1,13 @@
+{
+    "name": "No offhand",
+    "description": "As a recon drone you do not have an offhand.",
+    "type": "origins:multiple",
+    "no_offhand": {
+        "type": "origins:action_over_time",
+        "interval": 10,
+        "entity_action": {
+            "type": "origins:drop_inventory",
+            "slot": "weapon.offhand"
+        }
+    }
+}

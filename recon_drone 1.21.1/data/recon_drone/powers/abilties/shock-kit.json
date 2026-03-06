@@ -1,0 +1,43 @@
+{
+    "name": "Shock-kit",
+    "description": "You are equipped with a standard issue Starguard Shock-kit which charges your next attack to stun an enemy, has a cooldown of 15 seconds and a stun of 4 seconds, only works on players.",
+    "type": "origins:multiple",
+    "shock-kit": {
+        "type": "origins:target_action_on_hit",
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "duration": 80,
+                "amplifier": 3,
+                "show_particles": true,
+                "show_icon": true,
+                "id": "minecraft:slowness",
+                "ambient": true
+            },
+            "effects": [
+                {
+                    "duration": 80,
+                    "amplifier": 4,
+                    "show_particles": true,
+                    "show_icon": true,
+                    "id": "minecraft:weakness",
+                    "ambient": true
+                },
+                {
+                    "duration": 80,
+                    "amplifier": 0,
+                    "show_particles": true,
+                    "show_icon": true,
+                    "id": "minecraft:blindness",
+                    "ambient": true
+                }
+            ]
+        },
+        "cooldown": 300,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/resource_bar.png",
+            "bar_index": 2
+        }
+    }
+}

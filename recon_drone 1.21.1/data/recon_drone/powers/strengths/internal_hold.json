@@ -1,0 +1,11 @@
+{
+    "name": "Internal hold",
+    "description": "Your recon chassis contains a 9 slot inventory that is not dropped on death.",
+    "type": "origins:inventory",
+    "title": "Recon drone hold",
+    "container_type": "dispenser",
+    "key": {
+        "key": "key.origins.secondary_active"
+    },
+    "recoverable": true
+}

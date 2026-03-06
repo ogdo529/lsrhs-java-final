@@ -1,0 +1,9 @@
+{
+    "name": "Nanite malfunction",
+    "description": "Your repair nanites are malfunctioning, you have slower regeneration of health both naturally and through effects.\n\n(All healing is multiplied by -0.75)",
+    "type": "origins:modify_healing",
+    "modifier": {
+        "operation": "multiply_total_multiplicative",
+        "amount": -0.5
+    }
+}

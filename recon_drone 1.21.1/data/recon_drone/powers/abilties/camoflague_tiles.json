@@ -1,0 +1,327 @@
+{
+    "1": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_timer",
+            "comparison": "==",
+            "compare_to": 1
+        },
+        "type": "origins:model_color",
+        "alpha": 0.02
+    },
+    "2": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_timer",
+            "comparison": "==",
+            "compare_to": 2
+        },
+        "type": "origins:model_color",
+        "alpha": 0.1
+    },
+    "3": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_timer",
+            "comparison": "==",
+            "compare_to": 3
+        },
+        "type": "origins:model_color",
+        "alpha": 0.15
+    },
+    "4": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_timer",
+            "comparison": "==",
+            "compare_to": 4
+        },
+        "type": "origins:model_color",
+        "alpha": 0.2
+    },
+    "5": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_timer",
+            "comparison": "==",
+            "compare_to": 5
+        },
+        "type": "origins:model_color",
+        "alpha": 0.25
+    },
+    "6": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_timer",
+            "comparison": "==",
+            "compare_to": 6
+        },
+        "type": "origins:model_color",
+        "alpha": 0.3
+    },
+    "7": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_timer",
+            "comparison": "==",
+            "compare_to": 7
+        },
+        "type": "origins:model_color",
+        "alpha": 0.35
+    },
+    "8": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_timer",
+            "comparison": "==",
+            "compare_to": 8
+        },
+        "type": "origins:model_color",
+        "alpha": 0.4
+    },
+    "9": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_timer",
+            "comparison": "==",
+            "compare_to": 9
+        },
+        "type": "origins:model_color",
+        "alpha": 0.45
+    },
+    "10": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_timer",
+            "comparison": "==",
+            "compare_to": 10
+        },
+        "type": "origins:model_color",
+        "alpha": 0.5
+    },
+    "11": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_timer",
+            "comparison": "==",
+            "compare_to": 11
+        },
+        "type": "origins:model_color",
+        "alpha": 0.55
+    },
+    "12": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_timer",
+            "comparison": "==",
+            "compare_to": 12
+        },
+        "type": "origins:model_color",
+        "alpha": 0.6
+    },
+    "13": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_timer",
+            "comparison": "==",
+            "compare_to": 13
+        },
+        "type": "origins:model_color",
+        "alpha": 0.65
+    },
+    "14": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_timer",
+            "comparison": "==",
+            "compare_to": 14
+        },
+        "type": "origins:model_color",
+        "alpha": 0.7
+    },
+    "15": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_timer",
+            "comparison": "==",
+            "compare_to": 15
+        },
+        "type": "origins:model_color",
+        "alpha": 0.75
+    },
+    "16": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_timer",
+            "comparison": "==",
+            "compare_to": 16
+        },
+        "type": "origins:model_color",
+        "alpha": 0.8
+    },
+    "17": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_timer",
+            "comparison": "==",
+            "compare_to": 17
+        },
+        "type": "origins:model_color",
+        "alpha": 0.85
+    },
+    "18": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_timer",
+            "comparison": "==",
+            "compare_to": 18
+        },
+        "type": "origins:model_color",
+        "alpha": 0.9
+    },
+    "19": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_timer",
+            "comparison": "==",
+            "compare_to": 19
+        },
+        "type": "origins:model_color",
+        "alpha": 0.95
+    },
+    "20": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_timer",
+            "comparison": "==",
+            "compare_to": 20
+        },
+        "type": "origins:model_color",
+        "alpha": 1
+    },
+    "name": "Camoflague tiles",
+    "description": "An interconnected weave of hexegon shaped tiles across your surface enables you to go invisible when not moving or partially invisible when moving and crouching, Being hit disables invisibility.",
+    "type": "origins:multiple",
+    "timer": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 20,
+        "start_value": 20,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "cooldown": {
+        "type": "origins:cooldown",
+        "cooldown": 200,
+        "hud_render": {
+            "should_render": false,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+            "bar_index": 20,
+            "inverted": true
+        }
+    },
+    "damage_condition": {
+        "type": "origins:amount",
+        "comparison": ">=",
+        "compare_to": 1
+    },
+    "self_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:trigger_cooldown",
+                "power": "*:*_cooldown"
+            },
+            {
+                "type": "origins:change_resource",
+                "resource": "*:*_timer",
+                "change": 20,
+                "operation": "set"
+            }
+        ]
+    },
+    "drain_and_fill": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_cooldown",
+            "comparison": "==",
+            "compare_to": 0
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:if_else",
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:moving"
+                    },
+                    {
+                        "type": "origins:sneaking"
+                    }
+                ]
+            },
+            "if_action": {
+                "type": "origins:if_else",
+                "condition": {
+                    "type": "origins:resource",
+                    "resource": "*:*_timer",
+                    "comparison": "<",
+                    "compare_to": 5
+                },
+                "if_action": {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_timer",
+                    "change": 1,
+                    "operation": "add"
+                },
+                "else_action": {
+                    "type": "origins:if_else",
+                    "condition": {
+                        "type": "origins:resource",
+                        "resource": "*:*_timer",
+                        "comparison": ">",
+                        "compare_to": 5
+                    },
+                    "if_action": {
+                        "type": "origins:change_resource",
+                        "resource": "*:*_timer",
+                        "change": -1,
+                        "operation": "add"
+                    }
+                }
+            },
+            "else_action": {
+                "type": "origins:if_else",
+                "condition": {
+                    "type": "origins:moving"
+                },
+                "if_action": {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_timer",
+                    "change": 3,
+                    "operation": "add"
+                },
+                "else_action": {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_timer",
+                    "change": -2,
+                    "operation": "add"
+                }
+            }
+        }
+    },
+    "invis": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_timer",
+            "comparison": "==",
+            "compare_to": 0
+        },
+        "type": "origins:invisibility",
+        "render_armor": false,
+        "render_outline": false
+    }
+}

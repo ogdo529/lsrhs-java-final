@@ -1,0 +1,30 @@
+{
+    "name": "Soft side",
+    "description": "Despite your metal exterior being more durable then skin your internals are alot more gentle, you have a base armour value of 2 but you have 4 less hearts then a normal player.\n",
+    "type": "origins:multiple",
+    "maxhealth": {
+        "condition": {
+            "type": "origins:constant",
+            "value": true
+        },
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "generic.max_health",
+            "operation": "add_value",
+            "name": "Soft_side",
+            "id": "recon_drone:soft_side",
+            "amount": -8
+        },
+        "tick_rate": 20,
+        "update_health": true
+    },
+    "armourvalue": {
+        "type": "origins:modify_attribute",
+        "attribute": "generic.armor",
+        "modifier": {
+            "operation": "add_base_early",
+            "name": "Soft_side",
+            "amount": 2
+        }
+    }
+}
