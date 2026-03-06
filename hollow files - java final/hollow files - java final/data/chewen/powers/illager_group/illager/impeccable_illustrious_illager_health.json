@@ -2,6 +2,7 @@
     "type": "origins:conditioned_attribute",
     "name": "In Impeccable Illager Health",
     "description": "You strongggg",
+    "id": "chewen:illager_group/illager/impeccable_illustrious_illager_health",
     "modifier": {
         "attribute": "minecraft:generic.max_health",
         "value": 4,
