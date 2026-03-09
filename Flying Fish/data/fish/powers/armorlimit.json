@@ -1,5 +1,6 @@
 {
     "name": "Light Armor",
+    "description": "you can only wear up to iron armor",
     "type": "origins:multiple",
     "armor_value": {
         "type": "origins:restrict_armor",

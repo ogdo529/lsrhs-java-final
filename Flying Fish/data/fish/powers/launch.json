@@ -1,28 +1,37 @@
 {
     "name": "the flying part of flying fish",
+    "description": "im actually gonna do it",
     "type": "origins:active_self",
+    "key": {
+        "key": "key.origins.primary_active",
+        "continuous": true
+    },
+    "cooldown": 0,
+    "condition": {
+        "type": "origins:submerged_in",
+        "fluid": "minecraft:water"
+    },
     "entity_action": {
         "type": "origins:and", 
         "actions": [
             {
                 "type": "origins:add_velocity",
-                "y": 2,
-                "z": 10,
-                "space": "local"
+                "y": 0.5,
+                "z": 3,
+                "space": "local",
+                "client": true,
+                "server": true
             },
             {
                 "type": "origins:elytra_flight",
-                "render_elytra": true
+                "render_elytra": true,
+                "texture_location": "minecraft:textures/entity/elytra.png"
             }
         ]
     },
-    "condition": {
-        "type": "origins:submerged_in",
-        "fluid": "minecraft:water"
-    },
-    "cooldown": 100,
     "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/resource_bar.png",
         "bar_index": 4
-    },
-    "key": "key.origins.primary_active"
+    }
 }
