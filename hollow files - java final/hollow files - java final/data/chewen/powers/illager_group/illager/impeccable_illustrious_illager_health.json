@@ -7,7 +7,7 @@
         "attribute": "minecraft:generic.max_health",
         "value": 4,
         "operation": "add_value"
-    }
+    },
     "tick_rate": 20,
     "update_health": true
 }
