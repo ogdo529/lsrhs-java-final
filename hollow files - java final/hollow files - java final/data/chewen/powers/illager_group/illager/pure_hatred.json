@@ -1,9 +1,35 @@
 {
-  "type": "origins:prevent_item_use",
-  "item_condition": {
-    "type": "origins:ingredient",
-    "ingredient": {
-      "tag": "origins:shields"
+  "name": "Pure Hatred",
+  "description": "You know not fear, courage runs through you. You cannot use a shield, you fight. While engaged in honourable combat, you are immune to certain negative effects, ",
+  "type": "origins:multiple",
+  "no_cowardice": {
+    "type": "origins:prevent_item_use",
+    "item_condition": {
+        "type": "origins:ingredient",
+        "ingredient": {
+          "tag": "origins:shields"
+        }
     }
   }
+  
+  "proud_pillager_axebound_warrior":{
+    "type": "origins:effect_immunity",
+    "entity_condition": {
+      "condition": {
+        "type": "origins:equipped_item",
+        "equipment_slot": "mainhand",
+        "item_condition": {
+          "type": "origins:ingredient",
+          "ingredient": {
+            "tag": "minecraft:iron_axe"
+          }
+        }
+      }
+      "effects": [
+      "minecraft:poison",
+      "minecraft:slowness"
+    ]
+  }
+
+}
 }
