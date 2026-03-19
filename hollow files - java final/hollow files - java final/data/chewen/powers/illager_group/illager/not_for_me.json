@@ -1,0 +1,11 @@
+{
+  "name": "Not for me",
+  "description": "You cannot use totems",
+  "type": "origins:prevent_item_use",
+  "item_condition": {
+    "type": "origins:ingredient",
+    "ingredient": {
+      "tag": "origins:totem_of_undying"
+    }
+  }
+}
