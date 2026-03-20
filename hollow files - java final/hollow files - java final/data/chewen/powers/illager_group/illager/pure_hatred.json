@@ -10,7 +10,7 @@
           "tag": "origins:shields"
         }
     }
-  }
+  },
   
   "proud_pillager_axebound_warrior":{
     "type": "origins:effect_immunity",
@@ -24,7 +24,7 @@
             "tag": "minecraft:iron_axe"
           }
         }
-      }
+      },
       "effects": [
       "minecraft:poison",
       "minecraft:slowness"
