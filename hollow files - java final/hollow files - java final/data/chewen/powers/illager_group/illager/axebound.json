@@ -3,7 +3,7 @@
   "modifier": {
     "name": "Extra damage while wielding an iron axe",
     "value": 2,
-    "operation": "addition"
+    "operation": "add_value"
   },
   "entity_condition": {
       "condition": {
