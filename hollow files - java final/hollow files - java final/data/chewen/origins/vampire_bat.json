@@ -1,24 +1,6 @@
 {
 	"powers": [
-        "seer:spawn",
-        "seer:pocket",
-        "seer:init",
-		"seer:pocket_sanctuary",
-		"seer:astral_projection",
-		"seer:astral_energy",
-		"seer:ethereal_movement_flying",
-		"seer:ethereal_movement",
-        "seer:death",
-		"seer:sight",
-		"seer:disconnected",
-		"seer:no_bed",
-		"seer:watcher",
-		"seer:health",
-		"seer:upgrade",
-		"seer:tier_2",
-		"seer:set_anchor",
-		"seer:air_jump",
-		"seer:final"
+
 	],
 	"icon": {
 		"id": "minecraft:spyglass"
