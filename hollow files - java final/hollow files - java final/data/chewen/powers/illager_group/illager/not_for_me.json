@@ -5,7 +5,7 @@
   "item_condition": {
     "type": "origins:ingredient",
     "ingredient": {
-      "tag": "minecraft:totem_of_undying"
+      "item": "minecraft:totem_of_undying"
     }
   }
 }
