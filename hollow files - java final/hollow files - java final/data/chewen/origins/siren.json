@@ -4,10 +4,10 @@
 		"origins:aqua_infinity",
 		"origins:swim_speed",
 		"origins:like_water",
-"chewen:positive/nausea_immunity",
-"chewen:positive/drown",
-"chewen:positive/stun",
-"chewen:negative/land_slowness"
+"chewen:siren/nausea_immunity",
+"chewen:siren/drown",
+"chewen:siren/stun",
+"chewen:siren/land_slowness"
 ],
     "icon": {
         "id": "minecraft:heart_of_the_sea"
