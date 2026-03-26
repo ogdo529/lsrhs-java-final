@@ -4,7 +4,7 @@
 "type": "origins:modify_attribute",
     "attribute": "minecraft:generic.attack_damage",
     "modifier": {
-        "operation": "set_total",
+        "operation": "add_base_early",
         "resource": "example:resource",
         "value": 2
     }
