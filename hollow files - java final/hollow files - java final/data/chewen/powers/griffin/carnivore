@@ -1,0 +1,9 @@
+{
+"name": "Carnivore",
+"description": "You can only eat meat.",
+"type": "origins:prevent_item_use",
+   "item_condition": {
+       "type": "origins:meat"
+"inverted": true
+    }
+}
