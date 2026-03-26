@@ -2,6 +2,6 @@
   "name": "Illager Typing",
   "description": "You are of the illager species",
   "type": "origins:entity_group",
-  "group": "illager",
+  "group": "minecraft:illager",
   "hidden": false
 }
