@@ -2,7 +2,7 @@
   "type": "origins:modify_damage_dealt",
   "modifier": {
     "name": "Extra damage while wielding an iron axe",
-    "value": 2,
+    "amount": 2,
     "operation": "add_value"
   },
   "entity_condition": {
