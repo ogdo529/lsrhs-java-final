@@ -1,0 +1,11 @@
+{
+"name": "Stronger",
+"description": "You hit harder.",
+"type": "origins:modify_attribute",
+    "attribute": "minecraft:generic.attack_damage",
+    "modifier": {
+        "operation": "set_total",
+        "resource": "example:resource",
+        "value": 2
+    }
+}
