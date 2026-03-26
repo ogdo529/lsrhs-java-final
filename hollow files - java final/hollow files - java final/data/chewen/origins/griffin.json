@@ -1,31 +1,18 @@
 {
-	"powers": [
-        "seer:spawn",
-        "seer:pocket",
-        "seer:init",
-		"seer:pocket_sanctuary",
-		"seer:astral_projection",
-		"seer:astral_energy",
-		"seer:ethereal_movement_flying",
-		"seer:ethereal_movement",
-        "seer:death",
-		"seer:sight",
-		"seer:disconnected",
-		"seer:no_bed",
-		"seer:watcher",
-		"seer:health",
-		"seer:upgrade",
-		"seer:tier_2",
-		"seer:set_anchor",
-		"seer:air_jump",
-		"seer:final"
-	],
-	"icon": {
-		"id": "minecraft:spyglass"
-	},
-	"order": 3,
-	"impact": 3,
-	"name": "§5§lSeer",
-	"description": "§r§7A being whose true body is sealed away beyond reality.§r\n\n§7You cannot walk the worlds directly — only observe, project, and influence them from afar.§r"
-
+    "powers": [
+		"origins:elytra",
+		"origins:launch_into_air",
+		"chewen:griffin/carnivore",
+		"chewen:griffin/stronger",
+		"chewen:griffin/cant_teleport",
+		"origins:griffin/more_kinetic_damage",
+		"chewen:griffin/extra_damage_taken"
+],
+    "icon": {
+        "id": "minecraft:gold_ingot"
+    },
+    "order": 3,
+    "impact": 3,
+    "name": "Griffin",
+    "description": "Half eagle, half lion, a symbol of pride and courage."
 }
