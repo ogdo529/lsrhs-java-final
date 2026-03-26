@@ -1,1 +1,19 @@
-
+{
+  "name": "Slowness on Land",
+  "description": "You are slower when traveling on land.",
+  "type": "origins:action_over_time",
+  "interval": 10,
+  "condition": {
+    "type": "origins:on_ground"
+  },
+  "entity_action": {
+    "type": "origins:apply_effect",
+    "effect": {
+      "effect": "minecraft:slowness",
+      "amplifier": 1,
+      "duration": 60,
+      "show_particles": true,
+      "show_icon": true
+    }
+  }
+}
