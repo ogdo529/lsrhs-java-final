@@ -1,0 +1,8 @@
+{
+"name": "Can't Teleport",
+"description": "You can't use ender pearls.",
+"type": "origins:prevent_item_use",
+    "item_condition": {
+        "type": "minecraft:ender_pearl"
+    }
+}
