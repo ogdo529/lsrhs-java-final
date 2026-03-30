@@ -1,0 +1,18 @@
+{
+"name": "Tank",
+"description": "You have one extra heart of health.",
+"maxhealth":{
+	"condition": {
+"type":"origins:constant",
+"value": true
+},
+"type": "origins:conditioned_attribute",
+"modifier": {
+"attribute":"generic.max_health",
+"operation":"addition",
+"value":2,
+}
+"tick_rate": 20,
+"update_health":true
+}
+}
