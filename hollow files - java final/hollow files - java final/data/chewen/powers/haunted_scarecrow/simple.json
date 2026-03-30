@@ -1,5 +1,13 @@
-"condition": {
-    "type": "origins:status_effect",
-    "effect": "minecraft:speed",
-    "min_amplifier": 1
+{
+    "type": "origins:modify_status_effect_amplifier",
+    "status_effect": "minecraft:*",
+    "modifier": {
+        "operation": "set_total",
+        "value": 1
+    },
+    "condition": {
+        "type": "origins:status_effect",
+        "effect": "minecraft:*",
+        "min_amplifier": 1
+    }
 }
