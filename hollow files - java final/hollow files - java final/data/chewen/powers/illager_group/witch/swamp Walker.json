@@ -1,0 +1,7 @@
+"condition": {
+    "type": "origins:biome",
+    "condition": {
+        "type": "origins:category",
+        "category": "swamp"
+    }
+}
