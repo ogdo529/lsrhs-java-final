@@ -1,10 +1,10 @@
 {
   "type": "origins:modify_damage_dealt",
+  "name": "Axebound",
   "description": "Extra damage while wielding an iron axe",
-  "name": "Extra damage while wielding an iron axe",
   "modifier": {
-    "amount": 2,
-    "operation": "add_value"
+    "operation": "add_base_early",
+     "value": 2
   },
   "entity_condition": {
       "condition": {
