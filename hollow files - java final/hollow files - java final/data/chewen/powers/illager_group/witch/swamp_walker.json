@@ -1,4 +1,15 @@
-"condition": {
+{
+    "type": "origins:conditioned_attribute",
+    "name": "Swamp Walker",
+    "description": "You feel at home in the wetlands.,
+    "modifier": {
+        "attribute": "minecraft:generic.movement_speed",
+        "operation": "addition",
+        "value": 0.08,
+        "name": "Increased sprinting speed"
+    },
+    "tick_rate": 30,
+    "condition": {
     "type": "origins:biome",
     "condition": {
         "type": "origins:category",
