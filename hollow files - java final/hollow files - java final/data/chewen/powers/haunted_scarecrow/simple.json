@@ -1,0 +1,5 @@
+"condition": {
+    "type": "origins:status_effect",
+    "effect": "minecraft:speed",
+    "min_amplifier": 1
+}
