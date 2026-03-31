@@ -3,7 +3,7 @@
     "modifier": {
         "name": "Magical Resilience",
         "description":"As a scarecrow, you've endured target practice. You are now more resistant to projectiles (-15% damage).",
-        "value": 0.75,
+        "value": 0.85,
         "operation": "multiply_base"
     },
     "damage_condition": {
