@@ -9,12 +9,13 @@
       "duration_per_stack": 40,
       "tick_rate": 20,
       "effect": {
-        "effect": "minecraft:weakness",
+        "effect": "minecraft:speed",
         "is_ambient": true,
         "show_particles": true,
         "show_icon": true
     },
     "condition": {
-        "type": "origins:exposed_to_sun"
-    }
+        "type": "origins:exposed_to_sky"
+        "inverted": true
+}
 }
