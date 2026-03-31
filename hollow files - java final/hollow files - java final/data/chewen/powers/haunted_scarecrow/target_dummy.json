@@ -7,6 +7,7 @@
         "operation": "multiply_base"
     },
     "damage_condition": {
-        "type": "origins:projectile"
+        "type": "origins:in_tag",
+        "tag": "minecraft:is_projectile"
     }
 }
