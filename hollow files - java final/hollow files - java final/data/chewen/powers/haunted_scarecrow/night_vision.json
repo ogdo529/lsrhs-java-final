@@ -1,0 +1,8 @@
+{
+    "type": "origins:toggle",
+    "power": "origins:phantomize"
+    "active_by_default": true,
+    "key": {
+        "key": "key.use"
+    }
+}
