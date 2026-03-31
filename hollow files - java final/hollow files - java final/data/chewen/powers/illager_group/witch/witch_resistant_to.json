@@ -8,8 +8,8 @@
     },
     "damage_condition": {
         "type": "origins:in_tag",
-        "tag": "minecraft:is_projectile"
-      minecraft:indirect_magic
+        "tag": "minecraft:minecraft:indirect_magic"
+      
 minecraft:magic
 minecraft:sonic_boom
 minecraft:thorns
