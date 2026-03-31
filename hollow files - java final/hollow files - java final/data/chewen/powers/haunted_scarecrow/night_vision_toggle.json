@@ -3,6 +3,6 @@
     "power": "chewen:haunted_scarecrow/night_vision"
     "active_by_default": true,
     "key": {
-        "key": "key.use"
+         "key": "key.origins.primary_active"
     }
 }
