@@ -1,8 +1,5 @@
 {
-    "type": "origins:toggle",
-    "power": "chewen:haunted_scarecrow/night_vision"
-    "active_by_default": true,
-    "key": {
-         "key": "key.origins.primary_active"
-    }
+    "type": "origins:toggle_night_vision",
+    "strength": 1,
+    "key": "key.origins.primary_active"
 }
