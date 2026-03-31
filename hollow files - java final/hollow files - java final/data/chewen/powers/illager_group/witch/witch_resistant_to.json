@@ -7,11 +7,24 @@
         "operation": "multiply_base"
     },
     "damage_condition": {
-        "type": "origins:in_tag",
-        "tag": "minecraft:minecraft:indirect_magic"
-      
-minecraft:magic
-minecraft:sonic_boom
-minecraft:thorns
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:in_tag",
+                "tag": "minecraft:indirect_magic"
+            },
+            {
+                "type": "origins:in_tag",
+                "tag": "minecraft:magic"
+            },
+            {
+                "type": "origins:in_tag",
+                "tag": "minecraft:sonic_boom"
+            },
+            {
+                "type": "origins:in_tag",
+                "tag": "minecraft:thorns"
+            }
+        ]
     }
 }
