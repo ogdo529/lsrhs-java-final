@@ -1,5 +1,5 @@
 {
-  "type:" "origins:multiple",
+  "type": "origins:multiple",
   "name": "Not for me",
   "description": "You cannot use totems",
   "no_ender_pearls": {
