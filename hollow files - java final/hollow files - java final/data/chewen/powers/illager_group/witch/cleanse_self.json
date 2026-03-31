@@ -3,7 +3,7 @@
     "entity_action": {
     "type": "origins:clear_effect"
 },
-    }
+    
     "cooldown": 400,
     "hud_render": {
         "should_render": true
