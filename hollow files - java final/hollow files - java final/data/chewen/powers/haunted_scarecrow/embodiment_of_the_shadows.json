@@ -17,5 +17,20 @@
     "condition": {
         "type": "origins:exposed_to_sky"
         "inverted": true
-}
+    }
+    },
+    "fearful_strike":{
+    "type": "origins:action_on_hit",
+        
+    "bientity_action": {
+        "type": "origins:origins:apply_effect",
+        "effect": {
+        "effect": "minecraft:darkness",
+        "duration": 30,
+        "amplifier": 0
+    }
+    }
+        
+    }    
+        
 }
