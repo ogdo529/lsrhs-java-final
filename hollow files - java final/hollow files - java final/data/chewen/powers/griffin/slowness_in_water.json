@@ -1,0 +1,28 @@
+{
+"name": "Slow Swimmer",
+"description": "You are slower while in the water.",
+"type": "origins:action_over_time",
+    "interval": 20,
+	"condition": {
+    "type": "origins:submerged_in",
+    "fluid": "minecraft:water"
+  },
+	 "entity_action": {
+		"type":"origins:apply_effect",
+		"condition": {
+    	"type": "origins:fluid_height",
+    	"fluid": "minecraft:water",
+    	"comparison": "==",
+    	"compare_to": 2
+		},
+            "effects":
+                {
+                    "id": "minecraft:slowness",
+                    "duration": 600,
+                    "amplifier": 0,
+                    "is_ambient": true,
+                    "show_particles": false,
+                    "show_icon": true
+                }
+	}
+}
