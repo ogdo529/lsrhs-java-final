@@ -3,5 +3,5 @@
   "description": "You are of the illager species",
   "type": "origins:entity_group",
   "tag": "minecraft:illager",
-  "group": false
+  "group": true
 }
