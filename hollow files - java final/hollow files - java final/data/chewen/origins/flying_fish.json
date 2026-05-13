@@ -1,9 +1,9 @@
 {
     "powers": [
-        "fish:maxhealth",
-        "fish:armorlimit",
-        "fish:launch",
-        "fish:norockets",
+        "chewen:fish/maxhealth",
+        "chewen:fish/armorlimit",
+        "chewen:fish/launch",
+        "chewen:fish/norockets",
         "origins:water_breathing",
         "origins:aqua_affinity",
         "origins:swim_speed",
