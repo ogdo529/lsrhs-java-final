@@ -3,7 +3,18 @@
 "description": "You can only eat meat.",
 "type": "origins:prevent_item_use",
    "item_condition": {
-       "type": "origins:meat"
+    "type": "origins:and",
+    "conditions": [
+      {
+       "type": "origins:ingredient",
+            "ingredient": {
+              "tag": "origins:meat"
+            },
 "inverted": true
+    },
+    {
+        "type": "origins:food"
     }
+  ]
+}
 }
