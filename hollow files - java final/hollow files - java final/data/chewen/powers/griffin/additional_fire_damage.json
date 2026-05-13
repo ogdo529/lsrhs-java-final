@@ -1,0 +1,47 @@
+{
+    "hidden": true,
+    "name": "Fire Damage Extra",
+	"description": "You take more damage from fire and arrows.",
+    "type": "origins:modify_damage_taken",
+	 "damage_condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                    "type": "origins:type",
+                    "damage_type":"minecraft:on_fire"
+            },
+            {
+                    "type": "origins:type",
+                    "damage_type":"minecraft:campfire"
+            },
+            {
+                    "type": "origins:type",
+                    "damage_type":"minecraft:fireball"
+            },
+            {
+                    "type": "origins:type",
+                    "damage_type":"minecraft:hot_floor"
+            },
+            {
+                    "type": "origins:type",
+                    "damage_type":"minecraft:in_fire"
+            },
+            {
+                    "type": "origins:type",
+                    "damage_type":"minecraft:lava"
+            },
+            {
+                    "type": "origins:type",
+                    "damage_type":"minecraft:unattributed_fireball"
+            },
+            {
+                    "type": "origins:type",
+                    "damage_type":"minecraft:arrow"
+            }
+        ]
+    },
+     "modifier": {
+                "operation": "add_base_early",
+                "amount": 3
+    }
+}
