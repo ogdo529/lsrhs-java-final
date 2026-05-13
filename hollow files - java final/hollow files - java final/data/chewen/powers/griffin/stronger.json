@@ -5,7 +5,6 @@
     "attribute": "minecraft:generic.attack_damage",
     "modifier": {
         "operation": "add_base_early",
-        "resource": "example:resource",
-        "value": 2
+        "amount": 2
     }
 }
