@@ -1,12 +1,13 @@
 {
     "powers": [
       "chewen:illager_group/evoker/armour_limitations",
-      "chewen:illager_group/illager_typing",
-      "chewen:illager_group/evoker/painful_flame",
+      "chewen:illager_group/evoker/borrowed_time",
+      "chewen:illager_group/evoker/cooldown",
+      "chewen:illager_group/evoker/painful_fire",
       "chewen:illager_group/evoker/summon_fangs",
       "chewen:illager_group/evoker/summon_vex",
-      "chewen:illager_group/evoker/totem",
-      "chewen:illager_group/evoker/woodbound"
+      "chewen:illager_group/evoker/woodbound",
+      "chewen:illager_group/illager_typing"
 
 ],
   
