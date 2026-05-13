@@ -8,7 +8,7 @@
         "type": "origins:ingredient",
         "ingredient": {
           "tag": "origins:shields",
-          "tag": "minecraft:stone_axe"
+          "item": "minecraft:stone_axe"
         }
     }
   }
