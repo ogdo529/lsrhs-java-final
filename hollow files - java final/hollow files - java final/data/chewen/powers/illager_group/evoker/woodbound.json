@@ -1,1 +1,14 @@
-
+{
+  "name": "Woodbound",
+  "description": "You know not fear, courage runs through you. You cannot use a shield, you fight. While engaged in honourable combat, you are immune to certain negative effects, ",
+  "type": "origins:multiple",
+  "no_cowardice": {
+    "type": "origins:prevent_item_use",
+    "item_condition": {
+        "type": "origins:ingredient",
+        "ingredient": {
+          "tag": "origins:shields"
+        }
+    }
+  }
+}
