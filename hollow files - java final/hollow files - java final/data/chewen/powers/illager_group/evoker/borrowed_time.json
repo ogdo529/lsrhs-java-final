@@ -4,7 +4,7 @@
         "type": "origins:prevent_death",
         "condition": {
             "type": "origins:resource",
-            "resource": "undying:cooldown",
+            "resource": "chewen:illager_group/evoker/cooldown",
             "comparison": "<=",
             "compare_to": 0
         },
