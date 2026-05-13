@@ -6,7 +6,7 @@
             "attribute": "generic.max_health",
             "operation": "add_value",
             "name": "frail body",
-            "id": "fish:maxhealth",
+            "id": "chewen:fish/maxhealth",
             "amount": -10
         },
     "tick_rate": 20,
