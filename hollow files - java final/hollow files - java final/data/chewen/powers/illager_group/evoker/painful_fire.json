@@ -2,7 +2,7 @@
   "type":"origins:modify_damage_taken",
   "modifier":{
     "value": 1.75,
-    "operation":"multiply_total"
+    "operation":"set_base"
   },
   "damage_condition":{
     "type":"origins:or",
