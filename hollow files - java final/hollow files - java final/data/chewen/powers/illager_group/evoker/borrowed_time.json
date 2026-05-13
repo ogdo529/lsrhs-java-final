@@ -1,0 +1,78 @@
+{
+    "type": "origins:multiple",
+    "no_death": {
+        "type": "origins:prevent_death",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "undying:cooldown",
+            "comparison": "<=",
+            "compare_to": 0
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:clear_effect"
+                },
+		{
+			"type": "origins:heal",
+			"amount": 6
+		},
+                {
+                    "type": "origins:apply_effect",
+                    "effects": [
+	{
+		"effect": "minecraft:resistance",
+		"duration": 200,
+                "show_particles": true,
+                "show_icon": false,
+		"amplifier": 4
+	},
+	{
+		"effect": "minecraft:instant_health",
+		"duration": 0,
+		"show_particles": true,
+		"show_icon": true,
+		"amplifier": 1
+	},
+	{	"effect": "minecraft:fire_resistance",
+		"duration": 200,
+		"show_particles": false,
+		"show_icon": false,
+		"amplifier": 1
+	},
+	{
+	"effect": "minecraft:speed",
+		"duration": 200,
+		"show_particles": false,
+		"show_icon": false,
+		"amplifier": 1
+	},
+        {
+                "effect": "minecraft:invisibility",
+                "show_particles": true,
+                "show_icon": false,
+	        "duration": 200
+        },
+        {
+		"effect": "minecraft:weakness",
+                "show_particles": true,
+                "show_icon": false,
+		"duration": 200,
+		"amplifier": 2
+	}]
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "undying:cooldown"
+                },
+			{
+				"type": "origins:play_sound",
+				"sound": "minecraft:entity.wither.death"
+			}
+            ]
+        }
+    },
+  "name": "Borrowed Time",
+    "description": "Upon taking killing blow, you're immune to any damage and become invisible, but you gain Weakness III. Lasts for 10 seconds, 5 minutes cooldown."
+}
