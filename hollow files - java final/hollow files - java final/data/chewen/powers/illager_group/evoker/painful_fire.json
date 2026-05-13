@@ -1,8 +1,9 @@
 {
   "type":"origins:modify_damage_taken",
   "modifier":{
-    "value": 1.75,
-    "operation":"set_base"
+    "operation":"set_base",
+    "amount": 1.75
+    
   },
   "damage_condition":{
     "type":"origins:or",
