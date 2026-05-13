@@ -22,40 +22,40 @@
                     "type": "origins:apply_effect",
                     "effects": [
 	{
-		"effect": "minecraft:resistance",
+		"id": "minecraft:resistance",
 		"duration": 200,
                 "show_particles": true,
                 "show_icon": false,
 		"amplifier": 4
 	},
 	{
-		"effect": "minecraft:instant_health",
+		"id": "minecraft:instant_health",
 		"duration": 0,
 		"show_particles": true,
 		"show_icon": true,
 		"amplifier": 1
 	},
-	{	"effect": "minecraft:fire_resistance",
+	{	"id": "minecraft:fire_resistance",
 		"duration": 200,
 		"show_particles": false,
 		"show_icon": false,
 		"amplifier": 1
 	},
 	{
-	"effect": "minecraft:speed",
+	"id": "minecraft:speed",
 		"duration": 200,
 		"show_particles": false,
 		"show_icon": false,
 		"amplifier": 1
 	},
         {
-                "effect": "minecraft:invisibility",
+                "id": "minecraft:invisibility",
                 "show_particles": true,
                 "show_icon": false,
 	        "duration": 200
         },
         {
-		"effect": "minecraft:weakness",
+		"id": "minecraft:weakness",
                 "show_particles": true,
                 "show_icon": false,
 		"duration": 200,
