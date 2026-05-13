@@ -64,7 +64,7 @@
                 },
                 {
                     "type": "origins:trigger_cooldown",
-                    "power": "undying:cooldown"
+                    "power": "chewen:illager_group/evoker/cooldown"
                 },
 			{
 				"type": "origins:play_sound",
