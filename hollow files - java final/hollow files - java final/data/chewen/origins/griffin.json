@@ -2,18 +2,19 @@
     "powers": [
 		"origins:elytra",
 		"origins:launch_into_air",
-		"chewen:powers/griffin/carnivore",
-		"chewen:powers/griffin/stronger",
-		"chewen:powers/griffin/cant_teleport",
-		"origins:powers/griffin/more_kinetic_damage",
-		"chewen:powers/griffin/extra_damage_taken",
-		"chewen:powers/griffin/health_increase"
+		"chewen:griffin/carnivore",
+		"chewen:griffin/stronger",
+		"chewen:griffin/cant_teleport",
+		"chewen:griffin/extra_damage_taken",
+        "chewen:griffin/additional_fire_damage",
+        "chewen:griffin/slowness_in_water",
+		"chewen:griffin/health_increase"
 ],
     "icon": {
         "id": "minecraft:gold_ingot"
     },
     "order": 3,
-    "impact": 3,
+    "impact": 2,
     "name": "Griffin",
     "description": "Half eagle, half lion, a symbol of pride and courage."
 }
