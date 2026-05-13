@@ -1,0 +1,14 @@
+{
+    "name": "frail body",
+    "description": "5 hearts",
+    "type": "origins:attribute",
+        "modifier": {
+            "attribute": "generic.max_health",
+            "operation": "add_value",
+            "name": "frail body",
+            "id": "fish:maxhealth",
+            "amount": -10
+        },
+    "tick_rate": 20,
+    "update_health": true
+}
