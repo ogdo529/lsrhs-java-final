@@ -7,7 +7,8 @@
     "item_condition": {
         "type": "origins:ingredient",
         "ingredient": {
-          "tag": "origins:shields"
+          "tag": "origins:shields",
+          "tag": "minecraft:stone_axe"
         }
     }
   }
