@@ -3,6 +3,7 @@
         "fish:maxhealth",
         "fish:armorlimit",
         "fish:launch",
+        "fish:norockets",
         "origins:water_breathing",
         "origins:aqua_affinity",
         "origins:swim_speed",

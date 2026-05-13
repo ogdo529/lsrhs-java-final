@@ -26,7 +26,7 @@
             "key": "key.origins.primary_active",
             "continuous": true
         },
-        "cooldown": 0,
+        "cooldown": 100,
         "condition": {
             "type": "origins:in_block",
             "block_condition": {
@@ -48,9 +48,9 @@
                 {
                     "type": "origins:apply_effect",
                     "effect": {
-                        "effect": "minecraft:fire_resistance",
-                        "amplifier": "1",
-                        "duration": "60"
+                        "id": "minecraft:fire_resistance",
+                        "duration": 60,
+                        "amplifier": 0
                     }
                 }
             ]
