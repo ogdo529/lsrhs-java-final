@@ -1,12 +1,20 @@
 {
-	"powers": [
-	],
-	"icon": {
-		"id": "minecraft:spyglass"
-	},
-	"order": 3,
-	"impact": 3,
-	"name": "§5§lSeer",
-	"description": "§r§7A being whose true body is sealed away beyond reality.§r\n\n§7You cannot walk the worlds directly — only observe, project, and influence them from afar.§r"
-
+    "powers": [
+        "fish:maxhealth",
+        "fish:armorlimit",
+        "fish:launch",
+        "fish:norockets",
+        "origins:water_breathing",
+        "origins:aqua_affinity",
+        "origins:swim_speed",
+        "origins:like_water",
+        "origins:aquatic"
+    ],
+    "icon": {
+        "id": "minecraft:cod"
+    },
+    "order": 3,
+    "impact": 3,
+    "name": "Flying Fish",
+    "description": "fish go jump zoom yippee!!!!"
 }
