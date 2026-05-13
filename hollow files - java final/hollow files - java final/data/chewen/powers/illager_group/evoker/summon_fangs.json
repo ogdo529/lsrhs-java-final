@@ -79,7 +79,7 @@
   },
   "hud_render": {
     "sprite_location": "origins:textures/gui/community/silent/badge/icons/sky/sun.png",
-    "bar_index": "0"
+    "bar_index": "1"
   },
   "name": "Summon Fangs",
   "description": "Summon fangs to attack opponents with your magical abilities."
